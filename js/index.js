@@ -1,0 +1,33 @@
+'use strict';
+
+$(function(){
+	$('.ideas-inspiration__grid-wrapper__item').click(function(event) {
+		var i_path = $(this).attr('src');
+		$('body').append('<div id="overlay"></div><div id="magnify"><img src="'+i_path+'"><div id="close-popup"><i></i></div></div>');
+		$('#magnify').css({
+			left: ($(document).width() - $('#magnify').outerWidth())/2,
+			top: ($(window).height() - $('#magnify').outerHeight())/2
+		});
+		$('#overlay, #magnify').fadeIn('fast');
+	});
+
+	$('body').on('click', '#close-popup, #overlay', function(event) {
+		event.preventDefault();
+		$('#overlay, #magnify').fadeOut('fast', function() {
+			$('#close-popup, #magnify, #overlay').remove();
+		});
+	});
+});
+
+$("#navToggle").click(function () {
+	$(this).toggleClass("active");
+	$(".overlay").toggleClass("open");
+	// this line ▼ prevents content scroll-behind
+	$("body").toggleClass("locked");
+});
+
+$(".overlay a").click(function () {
+	$("#navToggle").toggleClass("active");
+	$(".overlay").toggleClass("open");
+	$("body").toggleClass("locked");
+});

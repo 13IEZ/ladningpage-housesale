@@ -1,0 +1,58 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the housesale of the site/application.
+// -----------------------------------------------------------------------------
+
+.housesale {
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 10rem 0;
+    @include respond(big-tablets) {
+      flex-wrap: wrap;
+      margin: 5rem 0;
+      justify-content: center;
+    }
+    @include respond(small-phone) {
+      margin: 2rem 0;
+    }
+
+    &_item:last-child {
+      @include respond(small-tablets) {
+        display: none;
+      }
+    }
+
+    &_item-block {
+      display: flex;
+      align-items: center;
+      margin-bottom: 4.5rem;
+      @include respond(small-phone) {
+        margin-bottom: 2rem
+      }
+
+      &__text {
+        margin-left: 3.6rem;
+        @include respond(small-phone) {
+          font-size: 100%;
+        }
+      }
+    }
+  }
+
+  &__main-title {
+    margin-bottom: 7rem;
+    @include respond(big-tablets) {
+      margin-bottom: 4rem;
+      text-align: center;
+    }
+
+  }
+
+  &__secondary-title {
+    margin-bottom: 0.5rem;
+    @include respond(small-phone) {
+      font-size: 110%;
+    }
+  }
+
+}

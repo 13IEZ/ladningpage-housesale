@@ -1,0 +1,57 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+
+button[type=submit] {
+  position: absolute;
+  top: 11%;
+  left: 50%;
+  width: 15.2rem;
+  height: 6.1rem;
+  background-color: $brand-color;
+  color: $black-color;
+  font-size: 181.25%;
+  border: 0;
+  cursor: pointer;
+  @include on-event {
+    color: $accent-color;
+    background-color: $white-color;
+    border: 1px solid $accent-color;
+  }
+  @include respond(regular-desktop) {
+    left: 48%;
+  }
+  @include respond(big-tablets) {
+    left: 68.5%;
+  }
+  @include respond(small-tablets) {
+    left: 64.5%;
+  }
+  @include respond(small-phone) {
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    width: 98%;
+    top: 0;
+    left: 0;
+  }
+}
+.serch_btn{
+  color: black;
+  background-color: #FFC839;
+  margin: 2rem 9.2rem 2rem 2.3rem;
+  font-family: Roboto;
+  font-size: 23px;
+  line-height: 27px;
+  padding: 1.9rem 1.9rem 1rem 9.4rem;
+  width: 24.7rem;
+  @include respond(small-tablets){
+    padding: 1.9rem 1.9rem 1rem 5.4rem;
+  }
+  @include respond(small-phone) {
+    margin: 1rem auto;
+    padding: 1rem 1rem 1rem 1rem;
+    text-align: center;
+  }
+}

@@ -1,0 +1,92 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the section-form of the site/application.
+// -----------------------------------------------------------------------------
+
+.contact-form {
+  background-color: #FFF5DA;
+  padding-bottom: 10rem;
+  margin-bottom: 10rem;
+  @include respond(big-tablets) {
+    padding-bottom: 5rem;
+    margin-bottom: 5rem;
+  }
+  &__main-title {
+    margin-left: 16.4rem;
+    padding-top: 12.7rem;
+    @include respond(big-tablets) {
+      text-align: center;
+      margin-left: 0;
+      padding-top: 7.7rem;
+    }
+    @include respond(small-tablets) {
+      padding-top: 4rem;
+      font-size: 180%;
+    }
+    @include respond(small-phone) {
+      font-size: 140%;
+    }
+  }
+  label {
+    display: block;
+    color: $mid-grey;
+    font: 400 181.25% / 4rem $text-second-font-stack;
+    margin: 0 0 3rem 16.4rem;
+    @include respond(big-tablets) {
+      text-align: center;
+      margin-left: 0;
+    }
+    @include respond(small-tablets) {
+      font-size: 150%;
+    }
+    @include respond(small-phone) {
+      font-size: 120%;
+      padding: 0 1rem;
+    }
+  }
+
+  &__input-wrapper {
+    margin-left: 16.4rem;
+    position: relative;
+    @include respond(big-tablets) {
+      margin: 0 auto;
+    }
+  }
+  &__placeholder {
+    background-image: url("../img/flag-ic.png");
+    background-repeat: no-repeat;
+    background-position: 3% 50%;
+    @include respond(small-phone) {
+      background-size: 7rem auto;
+    }
+  }
+
+  input[type=phone] {
+    height: 7.8rem;
+    width: 67%;
+    border: 1px solid #000000;
+    padding-left: 16.6rem;
+    font-size: 181.25%;
+    color: $black-color;
+    @include respond(big-tablets) {
+      display: block;
+      width: 80%;
+      margin: 0 auto;
+    }
+    @include respond(small-tablets) {
+      width: 99%;
+      font-size: 120%;
+      padding-left: 13.6rem;
+    }
+    @include respond(small-phone) {
+      width: 98%;
+      margin-bottom: 1rem;
+      height: 5rem;
+      padding-left: 7.6rem;
+      font-size: 100%;
+    }
+  }
+}
+
+*:focus {
+  outline: none;
+}

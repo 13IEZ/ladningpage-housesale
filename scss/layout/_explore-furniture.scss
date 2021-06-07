@@ -1,0 +1,64 @@
+.explore-furniture {
+  &__grid-container {
+    display: grid;
+    padding: 4.9rem 0 11.2rem;
+    border-top: 1px solid #D7D6D6;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 4.3rem;
+    @include respond(regular-desktop) {
+      padding: 4.9rem 2rem 11.2rem;
+    }
+    @include respond(small-tablets) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__title {
+    font-size: 3.6rem;
+    font-weight: 600;
+    line-height: 4.9rem;
+    color: $title-color;
+  }
+
+  &__subtitle {
+    font-size: 2.4rem;
+    font-weight: 400;
+    line-height: 3.3;
+    margin-top: 0.5rem;
+  }
+
+  &__text {
+    font-size: 2rem;
+    line-height: 2.7rem;
+    margin-top: 1.5rem;
+  }
+
+  &__links {
+    margin-top: 13.1rem;
+    @include respond(small-tablets) {
+      margin-top: 3rem;
+    }
+  }
+
+  &__link {
+    font-size: 2rem;
+    line-height: 2.7rem;
+    margin-right: 0.5rem;
+    color: $black-color;
+
+    &:not(:last-child):after {
+      margin-left: 0.5rem;
+      content: '|';
+    }
+
+    &:hover {
+      color: orange;
+
+      &:not(:last-child):after {
+        margin-left: 0.5rem;
+        content: '|';
+        color: $black-color;
+      }
+    }
+  }
+}

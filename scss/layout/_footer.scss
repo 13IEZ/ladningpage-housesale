@@ -1,0 +1,116 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+.footer {
+  font-family: $text-font-stack;
+  background-color: #093A7A;
+
+  &__container {
+    padding: 0 0 4.5rem;
+    @include respond(regular-desktop) {
+      padding: 0 2rem 4.5rem;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 4rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+    @include respond(big-tablets) {
+      justify-content: center;
+    }
+    @include respond(small-tablets) {
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+
+  &__link {
+    font-family: $text-font-stack;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    margin-top: 4.5rem;
+    text-transform: capitalize;
+    color: #CACACA;
+
+    &:hover {
+      color: orange;
+    }
+
+    @include respond(big-tablets) {
+      margin: 4.5rem 3rem 0;
+    }
+  }
+
+  &__title {
+    font-family: $text-second-font-stack;
+    font-size: 2.4rem;
+    font-weight: 600;
+    line-height: 3.3rem;
+    margin-top: 2.8rem;
+    color: $white-color;
+  }
+
+  &__country {
+    font-size: 2rem;
+    line-height: 2.3rem;
+    margin-top: 2.3rem;
+    color: #e6e5e5;
+  }
+
+  &__city-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__city {
+    margin-top: 1.5rem;
+    margin-right: 3.9rem;
+    @extend .footer__link;
+
+    &:hover {
+      color: orange;
+    }
+
+    @include respond(small-phone) {
+      flex: 0 0 50%;
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 4rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.16);
+
+    & > * {
+      padding-top: 4rem;
+      @include respond(big-tablets) {
+        padding: 4rem 4rem 0;
+      }
+    }
+
+    @include respond(big-tablets) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    @include respond(small-tablets) {
+      flex-direction: column;
+    }
+  }
+
+  &__text {
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+    color: #CACACA;
+
+    &:hover {
+      color: orange;
+    }
+  }
+}
